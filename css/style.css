@@ -1,0 +1,1062 @@
+html {
+    box-sizing: border-box;
+    /* падинги не увеличивают контент*/
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    /*свойства родителя для всех элементов*/
+    box-sizing: border-box;
+}
+
+.hidden {
+    overflow: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    /*цвет родителя без подчеркивания*/
+    display: inline-block;
+}
+
+h2 {
+    font-weight: 600;
+    font-size: 50px;
+    color: #141024;
+}
+
+/*для всех картинок*/
+img {
+    max-width: 100%;
+}
+
+body {
+    /*шрифт*/
+    font-family: 'Jost', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 160%;
+    color: rgba(20, 16, 36, 0.7);
+}
+
+
+.container {
+    max-width: 1740px;
+    /*мах ширина контейнера */
+    margin: 0 auto;
+    /* внешний отступ */
+    padding: 0 10px;
+    /* внутренний */
+    overflow: hidden;
+}
+
+.container2 {
+    max-width: 1220px;
+    /*мах ширина контейнера */
+    margin: 0 auto;
+    /* внешний отступ */
+    padding: 0 10px;
+    /* внутренний */
+}
+
+.header {
+    background: #141024;
+    min-height: 100ve;
+    color: #FFFFFF;
+    margin-bottom: 120px;
+}
+
+.header__top {
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    align-items: center;
+    padding: 60px 0 84px;
+}
+
+.menu__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+}
+
+.menu-triger {
+    display: none;
+}
+
+.menu__list ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu__list a:hover {
+    opacity: 0.5;
+}
+
+.menu__list li+li {
+    /*применимо ко всем кроме 1*/
+    padding-left: 40px;
+}
+
+.phone {
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.mob-phone {
+    display: none;
+}
+
+.header__content {
+    display: flex;
+}
+
+.header__info {
+    max-width: 516px;
+}
+
+.header__title {
+    padding-top: 186px;
+    font-weight: 600;
+    font-size: 70px;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+
+.header__text {
+    font-size: 20px;
+    margin-bottom: 50px;
+    max-width: 478px;
+}
+
+.btn {
+    font-weight: 400;
+    font-size: 18px;
+    text-align: center;
+    padding: 25px 54px;
+    background-color: #D52027;
+    color: #fff;
+    border-radius: 5px;
+    transition: all .5s;
+}
+
+.btn:hover {
+    color: #D52027;
+    background-color: #FFFFFF;
+}
+
+/* указавает тупой бабе ориентацию относительно родителя и сдвигаем ее за правый край, последствия этого нас не волнуют потому что в container у нас overflow:hidden, делаем че хотим, все равно лишнее обрежет */
+.header__images {
+    position: relative;
+    right: -56px;
+    line-height: 0;
+}
+
+.header__img_mob {
+    display: none;
+}
+
+.header__mob_btn {
+    display: none;
+}
+
+
+/* about */
+.about {
+    margin-bottom: 220px;
+}
+
+.about__text-span {
+    font-weight: 600;
+    color: #141024;
+}
+
+.about__text {
+    font-size: 30px;
+    max-width: 891px;
+    padding-bottom: 60px;
+    color: #141024;
+}
+
+.about__inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.about__img {
+    margin-bottom: 32px;
+}
+
+.info__text {
+    max-width: 260px;
+    color: rgba(20, 16, 36, 0.7);
+}
+
+
+.desc {
+    background: #f9f9f9;
+    margin-bottom: 220px;
+}
+
+.desc__title {
+    max-width: 682px;
+    margin-bottom: 84px;
+}
+
+.desc__inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.desc__subtitle {
+    font-weight: 600;
+    font-size: 24px;
+    color: #141024;
+    margin-bottom: 20px;
+}
+
+.tooltip {
+    display: inline-flex;
+    background: rgba(20, 16, 36, 0.08);
+    border: 2px solid rgba(0, 0, 0, 0.55);
+    color: rgba(0, 0, 0, 1);
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 2px;
+    position: relative;
+    bottom: 20px;
+    cursor: default;
+}
+
+.tooltip:hover::after {
+    content: attr(data-tooltip);
+    width: 251px;
+    position: absolute;
+    left: 0;
+    bottom: 35px;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0px 2px 8px rgba(20, 16, 36, 0.1);
+    border-radius: 5px;
+    font-size: 16px;
+    line-height: 160%;
+    color: #000;
+    font-weight: 400;
+    padding: 15px 20px;
+}
+
+.desc__text {
+    max-width: 360px;
+}
+
+
+
+.slider {
+    margin-bottom: 120px;
+}
+
+.slider__title {
+    max-width: 683px;
+    margin-bottom: 83px;
+}
+
+.slider__content {
+    position: relative;
+}
+
+.slider__item {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 20px;
+    max-width: 360px;
+}
+
+.slider__item-images {
+    margin-bottom: 20px;
+}
+
+.slider-img__name {
+    font-weight: 600;
+    font-size: 24px;
+    color: #141024;
+    margin-bottom: 20px;
+}
+
+.slider__description {
+    margin-bottom: 20px;
+}
+
+.slider__link {
+    color: #D52027;
+    margin-bottom: 84px;
+}
+
+.slider__link:hover {
+    opacity: 0.5;
+    transition: all .5s;
+}
+
+.slider-dots {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider-dots button {
+    float: left;
+    border: none;
+    background-color: #141024;
+    ;
+    opacity: 0.5;
+    font-size: 0;
+    padding: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    outline: none;
+    margin: 0 10px;
+    display: block;
+}
+
+.slider-dots .slick-active button {
+    width: 10px;
+    opacity: 1;
+}
+
+
+
+/* замена дефолтных стрелок на свои */
+
+.slider__content .slick-arrow {
+    position: absolute;
+    top: 100%;
+    /* выравнивание по вертикали */
+    margin: -22px 0 0 0;
+    /*корректировка  вертикального выравнивания */
+    z-index: 2;
+    /*стрелки сверху картинок */
+    font-size: 0;
+    /* убираем надпись на дефолтной стрелке*/
+    width: 34px;
+    /* ширина стрелки*/
+    height: 34px;
+    /*высота стрелки  */
+    border: none;
+}
+
+
+.slider__content .slick-arrow.slick-prev {
+    /* right: 48px; */
+    left: 0;
+    /* левая стрелка остается с левой стороны слайдера*/
+    background: url('../images/left-arrow.svg') 0 0 / 100% no-repeat;
+}
+
+.slider__content .slick-arrow.slick-next {
+    right: 0;
+    /* правая стрелка переместилась справа от слайдера*/
+    background: url('../images/right-arrow.svg') 0 0 / 100% no-repeat;
+}
+
+
+/* свойства модального окна по умолчанию */
+.modal {
+    position: fixed;
+    /* фиксированное положение */
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    /* цвет фона */
+    z-index: 1050;
+    opacity: 0;
+    /* по умолчанию модальное окно прозрачно */
+    transition: opacity 400ms ease-in;
+    /* анимация перехода */
+    pointer-events: none;
+    /* элемент невидим для событий мыши */
+    overflow-y: auto;
+}
+
+/* при отображении модального окно */
+.modal.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* ширина модального окна и его отступы от экрана */
+.modal-dialog {
+    position: relative;
+    width: auto;
+    max-width: 940px;
+    margin: 30px auto;
+    padding: 0 10px;
+}
+
+/* свойства для блока, содержащего контент модального окна */
+.modal-content {
+    position: relative;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-radius: .3rem;
+    outline: 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+}
+
+/* свойства для заголовка модального окна */
+.modal-header {
+    display: flex;
+    padding: 40px;
+    border-bottom: 1px solid #eceeef;
+}
+
+.modal-header__content {
+    margin-left: 40px;
+}
+
+.modal-header__content p {
+    margin-bottom: 10px;
+}
+
+.modal-header__content img {
+    width: 30px;
+    margin-right: 10px;
+}
+
+.modal-header .close {
+    margin-left: auto;
+}
+
+.modal-userpic {
+    max-width: 160px;
+}
+
+.modal-title {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 24px;
+    color: #141024;
+}
+
+/* свойства для кнопки "Закрыть" */
+.close {
+    float: right;
+    font-family: sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .5;
+    text-decoration: none;
+}
+
+/* свойства для кнопки "Закрыть" при нахождении её в фокусе или наведении */
+.close:focus,
+.close:hover {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    opacity: .75;
+}
+
+/* свойства для блока, содержащего основное содержимое окна */
+.modal-body {
+    position: relative;
+    flex: 1 1 auto;
+    padding: 40px;
+    color: #141024;
+}
+
+.modal-body h3 {
+    font-weight: 600;
+    font-size: 24px;
+    margin-bottom: 40px;
+}
+
+.modal-body ul {
+    font-size: 20px;
+    margin-bottom: 40px;
+    list-style-type: none;
+}
+
+.price {
+    margin-bottom: 120px;
+}
+
+.price__title {
+    max-width: 573px;
+    margin-bottom: 60px;
+}
+
+.price__info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.price__info-item {
+    list-style: none;
+    max-width: 360px;
+    border: 1px solid rgba(20, 16, 36, 0.2);
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+    background-color: #FFF;
+    transition: all .5s;
+    color: #141024;
+}
+
+.price__info-item:hover {
+    transform: scale(1.1);
+    cursor: default;
+    background: #141024;
+    color: #fff;
+}
+
+.price__info-subtitle {
+    font-weight: 600;
+    font-size: 30px;
+    margin-bottom: 63px;
+}
+
+.price__info-cost {
+    font-weight: 600;
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.price__info-desc {
+    height: 52px;
+    margin-bottom: 61px;
+    max-width: 237px;
+}
+
+.price__info-item .btn {
+    position: relative;
+    bottom: 0;
+    max-width: 280px;
+}
+
+
+.booking {
+    background: #D52027;
+    color: #FFFFFF;
+    padding: 87px 0;
+}
+
+.booking__content {
+    display: flex;
+    justify-content: center;
+}
+
+.booking__title {
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 130%;
+    max-width: 476px;
+    margin-bottom: 20px;
+    padding-top: 19px;
+    margin-right: 64px;
+}
+
+.booking__text {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 130%;
+    max-width: 396px;
+}
+
+.booking__form {
+    display: flex;
+    flex-direction: column;
+}
+
+.booking__input {
+    max-width: 500px;
+    height: 64px;
+    border: none;
+    background: #F6F6F6;
+    border-radius: 5px;
+    padding: 19px 20px;
+    margin-bottom: 10px;
+}
+
+.booking__input::placeholder {
+    font-family: 'Jost', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    color: rgba(40, 41, 68, 0.7);
+}
+
+.booking__label {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 130%;
+    text-decoration: underline;
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+}
+
+/* убрать дефолтный checkbox */
+.booking__checkbox {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    padding-left: 45px;
+}
+
+/* задается рамка  checkbox*/
+.booking__checkbox-styl {
+    width: 26px;
+    height: 26px;
+    border: 2px solid #FFFFFF;
+    border-radius: 2px;
+    position: absolute;
+    margin-left: -45px;
+}
+
+/* задается выбор */
+.booking__checkbox:checked+.booking__checkbox-styl::before {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background-color: #fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.booking__btn {
+    max-width: 500px;
+    height: 64px;
+    border: none;
+    background: #141024;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26px;
+    text-align: center;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.footer {
+    background: #141024;
+    color: #FFFFFF;
+    padding: 40px 0;
+}
+
+.footer__content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.copyright {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.7);
+    padding-top: 10px;
+}
+
+.footer__left .phone {
+    display: none;
+}
+
+
+
+/* АДАПТИВ */
+
+@media (max-width: 1380px) {
+    .header__images img {
+        width: 90%;
+    }
+}
+
+@media (max-width: 991px) {
+    .header {
+        margin-bottom: 60px;
+    }
+
+    .header__title {
+        padding-top: 83px;
+        font-size: 50px;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
+
+    .logo img {
+        max-width: 136px;
+    }
+
+    .phone {
+        font-size: 20px;
+    }
+
+    .menu__list li+li {
+        padding-left: 20px;
+    }
+
+    .about {
+        margin-bottom: 120px;
+    }
+
+    .desc {
+        margin-bottom: 120px;
+    }
+
+    .tooltip:hover::after {
+        left: auto;
+        right: auto;
+        padding: 15px 20px;
+    }
+
+    .price__info {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .price {
+        margin-bottom: 60px;
+    }
+
+    .price__title {
+        margin-bottom: 30px;
+    }
+
+    .price__info-item {
+        padding: 20px;
+        margin: 10px;
+    }
+
+}
+
+
+
+@media (max-width: 767px) {
+    .mob-phone {
+        order: 1;
+    }
+
+    .menu {
+        order: 2;
+    }
+
+    .header .phone {
+        display: none;
+    }
+
+    .mob-phone {
+        display: block;
+        width: 44px;
+        height: 44px;
+        margin-left: auto;
+        margin-right: 10px;
+    }
+
+
+    .menu__list {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        text-align: center;
+        width: 100%;
+        background-color: #141024;
+        z-index: 5;
+        padding: 60px 0 50px;
+        font-weight: 600;
+        font-size: 30px;
+    }
+
+    .menu__list ul {
+        display: block;
+    }
+
+    .menu__list ul a {
+        width: 100%;
+    }
+
+    .menu__list li+li {
+        padding-left: 0;
+    }
+
+    .menu__list a {
+        padding: 20px 0;
+    }
+
+    .menu-triger {
+        display: block;
+        width: 44px;
+        height: 44px;
+        background: url('../images/menu.png') 0 0 no-repeat;
+
+    }
+
+    .menu-close {
+        background: url('../images/close.png') 0 0 no-repeat;
+        display: block;
+        width: 44px;
+        height: 44px;
+        position: absolute;
+        right: 10px;
+        top: 38px;
+        z-index: 100;
+    }
+
+    .header__title {
+        padding-top: 43px;
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+
+    .header__text {
+        font-size: 16px;
+        margin-bottom: 30px;
+        line-height: 130%;
+    }
+
+    .btn {
+        font-size: 16px;
+        padding: 10px 34px;
+    }
+
+    .about__text {
+        font-size: 20px;
+    }
+
+    .about__inner {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    h2 {
+        font-size: 30px;
+        line-height: 140%;
+        text-align: center;
+    }
+
+    .desc__inner {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    .desc__subtitle {
+        text-align: center;
+    }
+
+    .booking {
+        padding-top: 0;
+    }
+
+    .booking__content {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .booking__title {
+        font-size: 30px;
+        line-height: 130%;
+        text-align: center;
+        margin-right: 0;
+        margin-top: 40px;
+    }
+
+    .booking__text {
+        font-size: 16px;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .booking__label {
+        margin-left: 43px;
+    }
+
+    .footer__right .phone {
+        font-size: 20px;
+    }
+}
+
+
+
+@media (max-width: 570px) {
+    .header__content {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .header__images {
+        position: inherit;
+        right: inherit;
+    }
+
+    .header__images img {
+        width: auto;
+        max-width: 100%;
+    }
+
+    .header__img_desk {
+        display: none;
+    }
+
+    .header__img_mob {
+        display: block;
+    }
+
+    .header .btn {
+        display: none;
+    }
+
+    .header__mob_btn {
+        display: block;
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .header__mob_btn .btn {
+        display: block;
+        padding: 17px 0;
+    }
+
+    .about {
+        margin-bottom: 60px;
+    }
+
+    .about__inner {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .desc {
+        margin-bottom: 80px;
+    }
+
+    .desc__title {
+        margin-bottom: 40px;
+    }
+
+    .desc__inner {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .tooltip:hover::after {
+        max-width: 220px;
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+
+    .slider__item {
+        max-width: 220px;
+    }
+
+    .slider-img__name {
+        font-size: 20px;
+    }
+
+    .modal-header {
+        padding: 10px;
+    }
+
+    .modal-userpic {
+        max-width: 80px;
+    }
+
+    .modal-header__content {
+        margin-left: 10px;
+    }
+
+    .modal-title {
+        font-size: 16px;
+    }
+
+    .modal-header p {
+        font-size: 12px;
+        line-height: 140%;
+    }
+
+    .modal-header__content img {
+        margin-right: 5px;
+    }
+
+    .modal-header .close {
+        position: absolute;
+        top: 0;
+        right: 5px;
+    }
+
+    .modal-body {
+        padding: 10px;
+    }
+
+    .modal-body h3 {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    .modal-body ul {
+        font-size: 16px;
+        margin-bottom: 20px;
+        list-style-type: none;
+    }
+
+    .footer__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer__left .phone {
+        display: block;
+        margin-bottom: 40px;
+    }
+
+    .footer__left .logo {
+        margin-bottom: 20px;
+    }
+
+    .footer__right .phone {
+        display: none;
+    }
+}
+
+
+
+
+/* Штука чтобы меню не ломалось при увеличении разрешения (адаптации в большую сторону) */
+@media (min-width: 768px) {
+    .menu__list {
+        display: flex !important;
+    }
+}
