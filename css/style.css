@@ -37,6 +37,14 @@ body {
     color: rgba(20, 16, 36, 0.7);
 }
 
+/* Кнопка вверх */
+.button_up {
+	position:fixed;
+	bottom:16px;
+	right:16px;
+    z-index: 1;
+}
+
 
 .container {
     max-width: 1740px;
