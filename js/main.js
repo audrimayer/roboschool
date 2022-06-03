@@ -24,23 +24,6 @@ $(function(){
 		return false;
 	});	
 
-	// Функция чтобы скрывать меню при нажатии за пределами меню
-
-	// $(document).on('click', function(e){
-	// 	if (!$(e.target).closest('.menu__list').length){
-	// 		$('body').removeClass('body_pointer');
-	// 		$menu__list.animate(
-	// 			{right: parseInt($menu__list.css('right'),10) == 0 ? -$menu__list.outerWidth() : 0}, 
-	// 			300, 
-	// 			function(){
-	// 				$menu__list.hide(0);
-	// 			}
-	// 		);
-	// 	}
-	// });
-
-
-	// Функция чтобы скрывать меню и при нажатии на кнопки внутри меню, и за пределами меню
 
 	$(document).on('click', function(e){
 		
