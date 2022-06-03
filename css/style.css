@@ -1,13 +1,11 @@
 html {
     box-sizing: border-box;
-    /* падинги не увеличивают контент*/
 }
 
 *,
 *::before,
 *::after {
     box-sizing: inherit;
-    /*свойства родителя для всех элементов*/
     box-sizing: border-box;
 }
 
@@ -18,7 +16,6 @@ html {
 a {
     color: inherit;
     text-decoration: none;
-    /*цвет родителя без подчеркивания*/
     display: inline-block;
 }
 
@@ -28,13 +25,11 @@ h2 {
     color: #141024;
 }
 
-/*для всех картинок*/
 img {
     max-width: 100%;
 }
 
 body {
-    /*шрифт*/
     font-family: 'Jost', sans-serif;
     font-weight: 400;
     font-size: 18px;
@@ -45,23 +40,18 @@ body {
 
 .container {
     max-width: 1740px;
-    /*мах ширина контейнера */
     margin: 0 auto;
-    /* внешний отступ */
     padding: 0 10px;
-    /* внутренний */
     overflow: hidden;
 }
 
 .container2 {
     max-width: 1220px;
-    /*мах ширина контейнера */
     margin: 0 auto;
-    /* внешний отступ */
     padding: 0 10px;
-    /* внутренний */
 }
 
+/*header*/
 .header {
     background: #141024;
     min-height: 100ve;
@@ -99,7 +89,6 @@ body {
 }
 
 .menu__list li+li {
-    /*применимо ко всем кроме 1*/
     padding-left: 40px;
 }
 
@@ -150,7 +139,6 @@ body {
     background-color: #FFFFFF;
 }
 
-/* указавает тупой бабе ориентацию относительно родителя и сдвигаем ее за правый край, последствия этого нас не волнуют потому что в container у нас overflow:hidden, делаем че хотим, все равно лишнее обрежет */
 .header__images {
     position: relative;
     right: -56px;
@@ -197,7 +185,7 @@ body {
     color: rgba(20, 16, 36, 0.7);
 }
 
-
+/*desc*/
 .desc {
     background: #f9f9f9;
     margin-bottom: 220px;
@@ -261,7 +249,7 @@ body {
 }
 
 
-
+/*slider*/
 .slider {
     margin-bottom: 120px;
 }
@@ -318,7 +306,6 @@ body {
     float: left;
     border: none;
     background-color: #141024;
-    ;
     opacity: 0.5;
     font-size: 0;
     padding: 0;
@@ -338,67 +325,50 @@ body {
 
 
 
-/* замена дефолтных стрелок на свои */
+/*slick-arrow*/
 
 .slider__content .slick-arrow {
     position: absolute;
     top: 100%;
-    /* выравнивание по вертикали */
     margin: -22px 0 0 0;
-    /*корректировка  вертикального выравнивания */
     z-index: 2;
-    /*стрелки сверху картинок */
     font-size: 0;
-    /* убираем надпись на дефолтной стрелке*/
     width: 34px;
-    /* ширина стрелки*/
     height: 34px;
-    /*высота стрелки  */
     border: none;
 }
 
-
 .slider__content .slick-arrow.slick-prev {
-    /* right: 48px; */
     left: 0;
-    /* левая стрелка остается с левой стороны слайдера*/
     background: url('../images/left-arrow.svg') 0 0 / 100% no-repeat;
 }
 
 .slider__content .slick-arrow.slick-next {
     right: 0;
-    /* правая стрелка переместилась справа от слайдера*/
     background: url('../images/right-arrow.svg') 0 0 / 100% no-repeat;
 }
 
 
-/* свойства модального окна по умолчанию */
+/*modal*/
 .modal {
     position: fixed;
-    /* фиксированное положение */
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
     background: rgba(0, 0, 0, 0.5);
-    /* цвет фона */
     z-index: 1050;
     opacity: 0;
-    /* по умолчанию модальное окно прозрачно */
     transition: opacity 400ms ease-in;
-    /* анимация перехода */
     pointer-events: none;
-    /* элемент невидим для событий мыши */
     overflow-y: auto;
 }
 
-/* при отображении модального окно */
 .modal.show {
     opacity: 1;
     pointer-events: auto;
 }
 
-/* ширина модального окна и его отступы от экрана */
 .modal-dialog {
     position: relative;
     width: auto;
@@ -407,7 +377,6 @@ body {
     padding: 0 10px;
 }
 
-/* свойства для блока, содержащего контент модального окна */
 .modal-content {
     position: relative;
     background-color: #fff;
@@ -418,7 +387,6 @@ body {
     box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
 }
 
-/* свойства для заголовка модального окна */
 .modal-header {
     display: flex;
     padding: 40px;
@@ -454,7 +422,6 @@ body {
     color: #141024;
 }
 
-/* свойства для кнопки "Закрыть" */
 .close {
     float: right;
     font-family: sans-serif;
@@ -467,7 +434,6 @@ body {
     text-decoration: none;
 }
 
-/* свойства для кнопки "Закрыть" при нахождении её в фокусе или наведении */
 .close:focus,
 .close:hover {
     color: #000;
@@ -476,7 +442,6 @@ body {
     opacity: .75;
 }
 
-/* свойства для блока, содержащего основное содержимое окна */
 .modal-body {
     position: relative;
     flex: 1 1 auto;
@@ -496,6 +461,7 @@ body {
     list-style-type: none;
 }
 
+/*price*/
 .price {
     margin-bottom: 120px;
 }
@@ -553,7 +519,7 @@ body {
     max-width: 280px;
 }
 
-
+/*booking*/
 .booking {
     background: #D52027;
     color: #FFFFFF;
@@ -615,7 +581,6 @@ body {
     padding: 20px 0;
 }
 
-/* убрать дефолтный checkbox */
 .booking__checkbox {
     position: absolute;
     width: 1px;
@@ -625,7 +590,6 @@ body {
     padding-left: 45px;
 }
 
-/* задается рамка  checkbox*/
 .booking__checkbox-styl {
     width: 26px;
     height: 26px;
@@ -635,7 +599,6 @@ body {
     margin-left: -45px;
 }
 
-/* задается выбор */
 .booking__checkbox:checked+.booking__checkbox-styl::before {
     content: "";
     position: absolute;
@@ -661,6 +624,7 @@ body {
     cursor: pointer;
 }
 
+/*footer*/
 .footer {
     background: #141024;
     color: #FFFFFF;
@@ -684,7 +648,7 @@ body {
 
 
 
-/* АДАПТИВ */
+/*adaptive*/
 
 @media (max-width: 1380px) {
     .header__images img {
@@ -749,7 +713,6 @@ body {
     }
 
 }
-
 
 
 @media (max-width: 767px) {
@@ -1053,8 +1016,6 @@ body {
 
 
 
-
-/* Штука чтобы меню не ломалось при увеличении разрешения (адаптации в большую сторону) */
 @media (min-width: 768px) {
     .menu__list {
         display: flex !important;
